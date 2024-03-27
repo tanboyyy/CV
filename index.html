@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CV Template</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .ripple-effect {
+            overflow: hidden;
+            position: relative;
+        }
+        .ripple-effect:hover::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            z-index: 0;
+            animation: ripple 0.6s linear;
+        }
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 300%;
+                height: 300%;
+                opacity: 0;
+            }
+        }
+        img {
+            z-index: 1;
+            position: relative;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-5">
+        <div class="flex flex-col items-center">
+            <div class="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 mb-4">
+                <img class="object-cover rounded-full" src="assets/2x2hi.png" alt="Your Name">
+            </div>
+            <h1 class="text-4xl font-bold mb-1">Tristan Vincent Lemana</h1>
+            <p class="text-xl mb-4">Block 43 Lot 28 Catanduanes Drive, Vincent Heights, Davao City 8000</p> 
+            <p class="text-sm mb-4 text-gray-400">Student at Ateneo de Davao University</p>
+        </div>
+
+        <section class="mb-8">  
+            <h2 class="text-3xl font-bold border-b-2 border-gray-500 mb-4">Education</h2>
+            <div>
+                <h3 class="text-2xl font-bold">Colegio de San Ignacio</h3>
+                <p class="italic">Basic Education</p>
+                <ul class="list-disc list-inside text-gray-300">
+                    <li>Pre-school</li>
+                    <li>Grade School</li>
+                    <li>Highschool</li>
+                    <li>Senior Highschool</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold">Ateneo de Davao University</h3>
+                <p class="italic">Higher Education</p>
+                <ul class="list-disc list-inside text-gray-300">
+                    <li>1st Year BSIT</li>
+                    <li>2nd Year BSIT</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold border-b-2 border-gray-500 mb-4">Projects</h2>
+            <div>
+                <p class="italic">Esports Events</p>
+                <ul class="list-disc list-inside text-gray-300">
+                    <li>DACS 2023 Esports Production Member</li>
+                    <li>CEAP 2023 Esports Production Member</li>
+                </ul>  
+            </div>
+            <div>
+                <p class="italic">Academic Coding Projects</p>
+                <ul class="list-disc list-inside text-gray-300">
+                    <li>CRUD Project (Student Enrollment System)</li>
+                </ul>  
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold border-b-2 border-gray-500 mb-4">Skills</h2>
+            <div class="flex flex-wrap">
+                <span class="m-2 bg-white rounded-full px-4 py-1 text-sm text-black">Extensive Experience with Adobe After Effects</span>
+                <span class="m-2 bg-white rounded-full px-4 py-1 text-sm text-black">Well-versed with Adobe Premiere Pro</span>
+                <span class="m-2 bg-white rounded-full px-4 py-1 text-sm text-black">Well Experienced with OBS (Open Broadcaster Software)</span>
+                <!-- Add more skills as needed -->
+            </div>
+        </section>
+    </div>
+    <div class="container mx-auto px-4 py-5 flex flex-col items-center">
+        <h1 class="text-4xl font-bold mb-1">My Socials</h1>
+    </div>
+    <footer class="bg-gray-900 m-5">
+        <div class="flex justify-center space-x-4">
+            <a href="https://www.facebook.com/tristanvincentlemana/" class="bg-white text-black rounded-full h-12 w-12 flex items-center justify-center ripple-effect">
+                <img src="assets/fb.png" alt="Facebook" class="h-8 w-8">
+            </a>
+            <a href="#" class="bg-white text-black rounded-full h-12 w-12 flex items-center justify-center ripple-effect">
+                <img src="assets/github.png" alt="GitHub" class="h-8 w-8">
+            </a>
+            <a href="discordapp.com/users/tanboi" class="bg-white text-black rounded-full h-12 w-12 flex items-center justify-center ripple-effect">
+                <img src="assets/discord.png" alt="Discord" class="h-7 w-9">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
